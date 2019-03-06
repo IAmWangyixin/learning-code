@@ -6,7 +6,9 @@ describe('ES5 原型模式：', function() {
     it('所有对象实例共享它所包含的属性和方法', function() {
         var person1 = new Person()
         var person2 = new Person()
+        person1.friends.push('c')
         expect(person1.sayName).to.be.equal(person2.sayName)
+        expect(person2.friends).to.be.equal(person1.friends)
     })
 
     describe('如果设置构造函数的prototype为对象字面量形式创建的新对象', function(){
