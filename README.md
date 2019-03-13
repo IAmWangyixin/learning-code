@@ -8,3 +8,5 @@ JS 相关知识点涉及的练习demo
 构造函数的实现以及测试用例：[demo](https://github.com/wangyimei/learning-code/blob/master/src/object/constructor.js), [test](https://github.com/wangyimei/learing-code/blob/master/test/constructor.js) 
 ### 原型模式
 构造函数的实现以及测试用例：[demo](https://github.com/wangyimei/learning-code/blob/master/src/object/prototype.js), [test](https://github.com/wangyimei/learing-code/blob/master/test/prototype.js)
+### 组合模式
+构造函数的实现以及测试用例：[demo](https://github.com/wangyimei/learning-code/blob/master/src/object/minix.js), [test](https://github.com/wangyimei/learing-code/blob/master/test/minix.js)
