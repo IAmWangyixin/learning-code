@@ -4,7 +4,7 @@ describe('ES5 工厂模式：', function() {
     var createPerson = require('../src/object/factory.js')
 
     it('无论调用多少次，只返回包含三个属性的对象', function() {
-        var person1 = createPerson('test1', '18', 'sudents')
+        var person1 = createPerson('test1', '18', 'student')
         assert.deepStrictEqual(person1.name, 'test1')
     })
 

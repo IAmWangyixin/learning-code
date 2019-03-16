@@ -6,7 +6,7 @@
  * --------------------------------------
  * 需要注意的地方：
  * 如果设置Person.prototype = {},
- * 那么constructor将不再指向Parent。
+ * 那么 constructor 将不再指向Parent。
  */
 function Person() {
 }
@@ -16,7 +16,7 @@ Person.prototype.sayHi = function () {
     return 'hello'
 }
 
-// 创建Person实例后重写Person.prototype
+// 创建 Person 实例后重写 Person.prototype
 Person.prototype = {
     constructor: Person,
     name: 'prototype',

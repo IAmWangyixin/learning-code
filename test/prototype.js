@@ -12,7 +12,7 @@ describe('ES5 原型模式以及原型链继承：', function() {
     })
 
     describe('如果设置构造函数的prototype为对象字面量形式创建的新对象', function(){
-        it('那么constructor将不再指向Parent', function() {
+        it('那么 constructor 将不再指向Parent', function() {
             var Parent = require('../src/object/prototype.js').Parent
             var friend1 = new Parent()
             expect(friend1.constructor).to.be.equal(Object)
