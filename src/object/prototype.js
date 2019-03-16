@@ -16,6 +16,7 @@ Person.prototype.sayHi = function () {
     return 'hello'
 }
 
+// 创建Person实例后重写Person.prototype
 Person.prototype = {
     constructor: Person,
     name: 'prototype',
@@ -26,11 +27,33 @@ Person.prototype = {
 }
 
 function Parent() {}
-
+// 重写Parent.prototype
 Parent.prototype = {}
+
+
+/**
+ * 原型继承
+ * ----------------------------------------------
+ * 注意： 不能使用对象字面量创建原型，这样会重写原型链
+ * 缺点： 
+ * 1.包含引用类型的原型，原型属性会被所有实例共享
+ * 2.实例不能像超类传参，意味着不能在不影响所有对
+ * 象实例的情况下，给超类型的构造函数传参
+ * ----------------------------------------------
+ */
+function SuperType() {
+    this.property = '111'
+    this.color = ['violet', 'orange']
+}
+
+function SubType() {
+}
+
+SubType.prototype = new SuperType()
 
 module.exports = {
     Person,
     Parent,
-    friend
+    friend,
+    SubType
 }

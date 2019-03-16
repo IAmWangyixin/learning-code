@@ -1,6 +1,6 @@
 var expect = require('chai').expect
 
-describe('ES5 原型模式：', function() {
+describe('ES5 原型模式以及原型链继承：', function() {
     var Person = require('../src/object/prototype.js').Person
 
     it('所有对象实例共享它所包含的属性和方法', function() {
@@ -23,6 +23,16 @@ describe('ES5 原型模式：', function() {
             expect(friend.sayHi()).to.be.equal('hello')
             expect(friend.sayName).to.be.undefined
             expect(friend.constructor).to.be.equal(Person)
+        })
+    })
+
+    describe('原型链继承', function() {
+        var SubType = require('../src/object/prototype.js').SubType
+        it('所有实例共享原型属性', function() {
+            var instance1 = new SubType()
+            instance1.color.push('red')
+            var instance2 = new SubType()
+            expect(instance1.color).to.be.equal(instance2.color)
         })
     })
 })
