@@ -1,5 +1,5 @@
 /**
- * 构造函数(经典继承)
+ * 构造函数
  * ----------------------------------
  * 优点：
  * 1. 可以将它的实例标识为一种特定的类型
@@ -21,8 +21,6 @@ function Child() {
     Person.call(this)
 }
 
-module.exports = Child
-
 /**
  * sayName为全局方法，
  * 当构造函数中包含多个方法时，
@@ -36,3 +34,23 @@ module.exports = Child
 // function sayName() {
 //     console.log(this.name)
 // }
+
+/**
+ * 借用构造函数（经典继承）
+ */
+function SuperType(name) {
+    this.name = name
+    this.color = ['violet', 'orange']
+}
+SuperType.prototype.age = '18'
+SuperType.prototype.sayName = function() {
+    console.log(this.name)
+}
+function SubType(name) {
+    SuperType.call(this, name)
+}
+
+module.exports = {
+    Child,
+    SubType
+}
