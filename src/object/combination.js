@@ -38,6 +38,8 @@ function SubType(name, job) {
     this.job = job
 }
 SubType.prototype = new SuperType()
+// 组合继承的问题
+console.log(SubType.prototype.color) // [ 'violet', 'orange' ]
 SubType.prototype.constructor = SubType
 SubType.prototype.sayJob = function() {
     return this.job
