@@ -15,8 +15,6 @@ function fn(...args) {
     console.log('typeof arguments:', typeof arguments)
     console.log('arguments type:', Object.prototype.toString.call(arguments))
 
-    // const argArr = [].join.call(arguments)
-    // const argArr = Array.prototype.slice.call(arguments)
     const argArr = [].slice.call(arguments)
 
     argArr.push(4)
