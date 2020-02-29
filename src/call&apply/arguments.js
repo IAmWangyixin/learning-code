@@ -53,4 +53,4 @@ sumNum(1, 2)
 
 foo(3, 4)
 
-// console.log('arguments out:', arguments)
+console.error('test')
